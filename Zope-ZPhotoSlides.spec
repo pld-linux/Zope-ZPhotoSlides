@@ -6,7 +6,7 @@ Summary:	Product is a web photo gallery for the dynamic wev-based server Zope
 Summary(pl):	Produkt umo¿liwiaj±cy tworzenie dynamicznych galerii zdjêæ dla Zope
 Name:		Zope-%{zope_subname}
 Version:	2.0
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/sourceforge/zphotoslides/%{zope_subname}-%{version}.tar.gz
@@ -35,7 +35,7 @@ find . -type d -name CVS | xargs rm -rf
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 
-cp -af {Extensions,dtml,help,i18n,photo_edition,www,zpt,country*,*.py,version.txt,refresh.txt} \
+cp -af {Extensions,dtml,help,i18n,photo_edition,skins,www,zpt,country*,*.py,version.txt,refresh.txt} \
 	$RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{_datadir}/%{name}
