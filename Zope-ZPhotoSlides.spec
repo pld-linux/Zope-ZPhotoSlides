@@ -1,7 +1,6 @@
 #
 # WARNING: needed test on Zope 2.7.x and Plone 2.x
 #
-%include	/usr/lib/rpm/macros.python
 %define		zope_subname	ZPhotoSlides
 Summary:	Product is a web photo gallery for the dynamic wev-based server Zope
 Summary(pl):	Produkt umo¿liwiaj±cy tworzenie dynamicznych galerii zdjêæ dla Zope
