@@ -6,7 +6,7 @@ Summary:	Product is a web photo gallery for the dynamic wev-based server Zope
 Summary(pl):	Produkt umo¿liwiaj±cy tworzenie dynamicznych galerii zdjêæ dla Zope
 Name:		Zope-%{zope_subname}
 Version:	2.0
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/sourceforge/zphotoslides/%{zope_subname}-%{version}.tar.gz
