@@ -12,7 +12,7 @@ Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/sourceforge/zphotoslides/%{zope_subname}-%{version}.tar.gz
 # Source0-md5:	9dd96e47716ba4950d6b222cdd82edb3
 URL:		http://www.zphotoslides.org/
-BuildRequires:  python
+BuildRequires:	python
 %pyrequires_eq	python-modules
 Requires:	python-Imaging
 Requires:	Zope
