@@ -1,21 +1,20 @@
 #
-# WARNING: This product not ready yet for Zope 2.7b* and Plone 2.0!!!
+# WARNING: needed test on Zope 2.7.x and Plone 2.x
 #
 %include	/usr/lib/rpm/macros.python
 %define		zope_subname	ZPhotoSlides
 Summary:	Product is a web photo gallery for the dynamic wev-based server Zope
 Summary(pl):	Produkt umo¿liwiaj±cy tworzenie dynamicznych galerii zdjêæ dla Zope
 Name:		Zope-%{zope_subname}
-Version:	1.2.1
+Version:	1.3
 Release:	1
 License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/sourceforge/zphotoslides/%{zope_subname}-%{version}.tar.gz
-# Source0-md5:	141f6181735fdba8eaaa10de072a1300
+# Source0-md5:	c2be3084f144ecfe1a97b4b6439fe659
 URL:		http://www.zphotoslides.org/
 %pyrequires_eq	python-modules
 Requires:	python-Imaging
-Requires:	Zope-LocalFS
 Requires:	Zope
 Requires(post,postun):	/usr/sbin/installzopeproduct
 BuildArch:	noarch
@@ -64,5 +63,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES README TODO UPGRADE
+%doc CHANGES README TODO UPGRADE doc/*
 %{_datadir}/%{name}
