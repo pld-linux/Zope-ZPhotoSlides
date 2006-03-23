@@ -9,14 +9,15 @@ Version:	2.0
 Release:	3
 License:	GPL v2+
 Group:		Development/Tools
-Source0:	http://dl.sourceforge.net/sourceforge/zphotoslides/%{zope_subname}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/zphotoslides/%{zope_subname}-%{version}.tar.gz
 # Source0-md5:	9dd96e47716ba4950d6b222cdd82edb3
 URL:		http://www.zphotoslides.org/
 BuildRequires:	python
+BuildRequires:	rpmbuild(macros) >= 1.268
 %pyrequires_eq	python-modules
-Requires:	python-Imaging
-Requires:	Zope
 Requires(post,postun):	/usr/sbin/installzopeproduct
+Requires:	Zope
+Requires:	python-Imaging
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -49,16 +50,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /usr/sbin/installzopeproduct %{_datadir}/%{name} %{zope_subname}
-if [ -f /var/lock/subsys/zope ]; then
-	/etc/rc.d/init.d/zope restart >&2
-fi
+%service -q zope restart
 
 %postun
 if [ "$1" = "0" ]; then
 	/usr/sbin/installzopeproduct -d %{zope_subname}
-	if [ -f /var/lock/subsys/zope ]; then
-		/etc/rc.d/init.d/zope restart >&2
-	fi
+	%service -q zope restart
 fi
 
 %files
