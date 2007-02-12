@@ -3,7 +3,7 @@
 #
 %define		zope_subname	ZPhotoSlides
 Summary:	Product is a web photo gallery for the dynamic wev-based server Zope
-Summary(pl):	Produkt umo¿liwiaj±cy tworzenie dynamicznych galerii zdjêæ dla Zope
+Summary(pl.UTF-8):   Produkt umoÅ¼liwiajÄ…cy tworzenie dynamicznych galerii zdjÄ™Ä‡ dla Zope
 Name:		Zope-%{zope_subname}
 Version:	2.0
 Release:	3
@@ -25,8 +25,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ZPhotoSlides is a web photo gallery for the dynamic wev-based server
 Zope.
 
-%description -l pl
-ZPhotoSlides umo¿liwia tworzenie dynamicznych galerii zdjêæ dla
+%description -l pl.UTF-8
+ZPhotoSlides umoÅ¼liwia tworzenie dynamicznych galerii zdjÄ™Ä‡ dla
 serwera Zope.
 
 %prep
