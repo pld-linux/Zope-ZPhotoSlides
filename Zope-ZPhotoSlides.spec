@@ -3,7 +3,7 @@
 #
 %define		zope_subname	ZPhotoSlides
 Summary:	Product is a web photo gallery for the dynamic wev-based server Zope
-Summary(pl.UTF-8):   Produkt umożliwiający tworzenie dynamicznych galerii zdjęć dla Zope
+Summary(pl.UTF-8):	Produkt umożliwiający tworzenie dynamicznych galerii zdjęć dla Zope
 Name:		Zope-%{zope_subname}
 Version:	2.0
 Release:	3
